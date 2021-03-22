@@ -6,8 +6,8 @@ set -euxo pipefail
 urlencode() {
     # urlencode <string>
 
-    old_lc_collate=$LC_COLLATE
-    LC_COLLATE=C
+    # old_lc_collate=$LC_COLLATE
+    # LC_COLLATE=C
 
     local length="${#1}"
     for (( i = 0; i < length; i++ )); do
@@ -18,7 +18,7 @@ urlencode() {
         esac
     done
 
-    LC_COLLATE=$old_lc_collate
+    # LC_COLLATE=$old_lc_collate
 }
 #get password 
 # curl -O https://raw.githubusercontent.com/jjarava/mac-osx-forensics/master/kcpass.py
